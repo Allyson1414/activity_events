@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./Scripts/jquery-4.0.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css"/>
+</head>
+<body>
+    <h1 id="texth">Using jQuery Selectors and Events</h1>
 
+    <script>
+        $(document).ready(function(){
+            $('#texth').hover(
+                function(){
+                $(this).text('This text has changed!');
+                },
+
+                function(){
+                $(this).text('Using jQuery Selectors and Events');
+                }
+            );
+        });
+    </script>
+
+    <p id="textp">
+        This website is used to practice jQuery with selectors and events.
+    </p>
+
+    <script>
+        $(document).ready(function(){
+           $('#textp').hover(
+                function(){
+             $(this).css('color', 'black');
+                 },
+                function(){
+                    $(this).css('color', 'purple');
+                 }
+            );
+        });
+    </script>
+
+    <section>
+        <button id="mybutton">Click Here!</button>
+        <p id="mytext">This text should change color when the button is clicked!</p>
+    
+        <script>
+            $(document).ready(function(){
+                $('#mybutton').click(function(){
+                    $('#mytext').css('color', 'black');
+                });
+            });
+        </script>
+    
+    
+    </section>
+
+
+    
+</body>
+</html>
